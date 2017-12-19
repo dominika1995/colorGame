@@ -1,0 +1,32 @@
+.navbar{
+  background-color: #475069;
+  padding: 10px 0 10px 0;
+
+&__container{
+  margin: 0 auto;
+  width: 50%;
+}
+
+  &__button{
+    color:#ebf0f7;
+    background-color: transparent;
+    border: none;
+
+    &:focus{
+      outline: none;
+      border: none;
+    }
+
+    &--new{
+
+    }
+
+    &--easy{
+      float: right;
+    }
+
+    &--hard{
+      float: right;
+    }
+  }
+}
