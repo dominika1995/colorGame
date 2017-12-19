@@ -1,0 +1,29 @@
+.color{
+  background-color: #393539;
+
+  &__box{
+    height: 100px;
+    width: 100px;
+    border:solid 2px white;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+
+  &__easy{
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  &__hard{
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+
+}

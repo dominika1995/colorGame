@@ -5,9 +5,35 @@
     <title>ColorGame</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
 </head>
-<body>
+<body class="body">
 
-<div></div>
+<header class="top">
+    <h3 class="top__name">COLOR GAME</h3>
+    <h2>INDICATE THE COLOR:</h2>
+    <h1 class="top__color">RBG(<span class="top__color--red">255</span>, <span class="top__color--green">255</span>, <span class="top__color--blue">255</span>)</h1>
+</header>
+
+<nav class="body__container navbar">
+<div class="body__size">
+        <button class="navbar__button navbar__button--new">NEW COLOR</button>
+        <button class="navbar__button navbar__button--easy">EASY</button>
+        <button class="navbar__button navbar__button--hard navbar__button--active">HARD</button>
+</div>
+</nav>
+<section class="body__container color">
+    <div class="body__size">
+    <div class="color__easy">
+        <div class="color__box color__easy-one"></div>
+        <div class="color__box color__easy-two"></div>
+        <div class="color__box color__easy-three"></div>
+    </div>
+    <div class="color__hard">
+        <div class="color__box color__hard-one"></div>
+        <div class="color__box color__hard-two"></div>
+        <div class="color__box color__hard-three"></div>
+    </div>
+    </div>
+</section>
 
 <script src="script.min.js"></script>
 </body>

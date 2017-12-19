@@ -2,15 +2,13 @@
   background-color: #475069;
   padding: 10px 0 10px 0;
 
-&__container{
-  margin: 0 auto;
-  width: 50%;
-}
-
   &__button{
     color:#ebf0f7;
     background-color: transparent;
     border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
 
     &:focus{
       outline: none;
@@ -27,6 +25,11 @@
 
     &--hard{
       float: right;
+    }
+
+    &--active{
+      background-color: #8e9fbb;
+      color: #475069;
     }
   }
 }
