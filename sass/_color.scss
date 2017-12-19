@@ -25,5 +25,7 @@
     justify-content: center;
   }
 
-
+  &__hidden{
+    visibility: hidden;
+  }
 }

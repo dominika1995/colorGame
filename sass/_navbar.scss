@@ -14,7 +14,10 @@
       outline: none;
       border: none;
     }
-
+    &:hover{
+      background-color: #8e9fbb;
+      color: #475069;
+    }
     &--new{
 
     }
@@ -25,6 +28,7 @@
 
     &--hard{
       float: right;
+
     }
 
     &--active{

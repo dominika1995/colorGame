@@ -22,6 +22,9 @@
     .navbar__button:focus {
       outline: none;
       border: none; }
+    .navbar__button:hover {
+      background-color: #8e9fbb;
+      color: #475069; }
     .navbar__button--easy {
       float: right; }
     .navbar__button--hard {
@@ -49,6 +52,8 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center; }
+  .color__hidden {
+    visibility: hidden; }
 
 .body {
   margin: 0;
