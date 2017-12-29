@@ -1,6 +1,6 @@
 .top {
   text-align: center;
-  background-color: #8e9fbb;
+  background: #8e9fbb;
   color: #ebf0f7; }
   .top__name {
     margin-top: 0;
@@ -25,6 +25,8 @@
     .navbar__button:hover {
       background-color: #8e9fbb;
       color: #475069; }
+    .navbar__button--new {
+      float: left; }
     .navbar__button--easy {
       float: right; }
     .navbar__button--hard {
@@ -32,6 +34,9 @@
     .navbar__button--active {
       background-color: #8e9fbb;
       color: #475069; }
+  .navbar__text {
+    color: white;
+    vertical-align: -webkit-baseline-middle; }
 
 .color {
   background-color: #393539; }
@@ -57,9 +62,12 @@
 
 .body {
   margin: 0;
-  background-color: #393539; }
+  background: #393539; }
   .body__container {
-    padding: 0 30px; }
+    padding: 0 30px;
+    margin-bottom: 20px; }
   .body__size {
     width: 60%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center;
+    height: 35px; }

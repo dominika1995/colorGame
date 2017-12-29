@@ -19,7 +19,7 @@
       color: #475069;
     }
     &--new{
-
+      float: left;
     }
 
     &--easy{
@@ -35,5 +35,10 @@
       background-color: #8e9fbb;
       color: #475069;
     }
+  }
+
+  &__text{
+    color:white;
+    vertical-align: -webkit-baseline-middle;
   }
 }

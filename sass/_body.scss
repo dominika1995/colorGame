@@ -1,13 +1,16 @@
 .body{
   margin:0;
-  background-color: #393539;
+  background: #393539;
 
   &__container{
-    padding: 0 30px;
+    padding:0 30px;
+    margin-bottom: 20px;
   }
 
   &__size{
     width: 60%;
     margin:0 auto;
+    text-align: center;
+    height: 35px;
   }
 }
