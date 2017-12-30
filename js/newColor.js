@@ -1,36 +1,38 @@
-var colors = generateRandomColors(6);
-
-var wantedColor=wantedColor();
-console.log(wantedColor);
-
-color.textContent=wantedColor;
-
-for(var i=0;i<boxes.length;i++){
-    boxes[i].style.background=colors[i];
+var colors = generateRandomColors(numberOfSquares);
 
 
-    boxes[i].addEventListener("click",function(){
-       var boxColor=this.style.background;
+startGame();
+function startGame(){
+    wantedColor=newWantedColor();
+    color.textContent=wantedColor;
 
-       if(boxColor==wantedColor){
-           navText.textContent="Correct!";
-           //zmiana koloru nav
-           //zmiana koloru wszystkich boxow
-           boxes.forEach(function(box){
-               box.classList.remove("color__hidden");
-               box.style.background=wantedColor;
-           });
-           console.log(top.length);
-       }
-       else{
-           this.classList.add("color__hidden");
-           navText.textContent="Wrong!";
-       }
-    });
+    for(var i=0;i<boxes.length;i++){
+        boxes[i].style.background=colors[i];
+
+        boxes[i].addEventListener("click",function(){
+            var boxColor=this.style.background;
+
+            if(boxColor==wantedColor){
+                navText.textContent="Correct!";
+                //zmiana koloru nav
+                //zmiana koloru wszystkich boxow
+                boxes.forEach(function(box){
+                    box.classList.remove("color__hidden");
+                    box.style.background=wantedColor;
+                });
+                newGame.textContent="PLAY AGAIN?";
+                document.querySelector(".top").style.background=wantedColor;
+            }
+            else{
+                this.classList.add("color__hidden");
+                navText.textContent="Wrong!";
+            }
+        });
+    }
 }
 
 
-function wantedColor(){
+function newWantedColor(){
     var random=Math.floor(Math.random()*colors.length);
     return colors[random];
 }

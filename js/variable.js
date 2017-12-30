@@ -4,8 +4,6 @@ var red=document.querySelector(".top__color--red");
 var green=document.querySelector(".top__color--green");
 var blue=document.querySelector(".top__color--blue");
 
-var top=document.querySelector("h2");
-
 //button
 var newGame=document.querySelector(".navbar__button--new");
 var gameEasy=document.querySelector(".navbar__button--easy");
@@ -27,3 +25,6 @@ var boxes=document.querySelectorAll(".color__box");
 
 //text
 var navText=document.querySelector(".navbar__text");
+
+var wantedColor;
+var numberOfSquares=6;
