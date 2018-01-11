@@ -10,7 +10,6 @@
     cursor: pointer;
   }
 
-
   &__easy{
     padding: 20px;
     display: flex;
@@ -26,6 +25,11 @@
   }
 
   &__hidden{
-    visibility: hidden;
+    animation: hiddenDiv 250ms ease-in-out both;
   }
+}
+
+@keyframes hiddenDiv {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }

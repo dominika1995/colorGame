@@ -5,9 +5,9 @@ var green=document.querySelector(".top__color--green");
 var blue=document.querySelector(".top__color--blue");
 
 //button
-var newGame=document.querySelector(".navbar__button--new");
-var gameEasy=document.querySelector(".navbar__button--easy");
-var gameHard=document.querySelector(".navbar__button--hard");
+var btnNewGame=document.querySelector(".navbar__button--new");
+var btnLevel=document.querySelectorAll(".navbar__button--level");
+//var gameHard=document.querySelector(".navbar__button--hard");
 
 //box with color
 var bEOne=document.querySelector(".color__easy-one");

@@ -1,21 +1,27 @@
 var colors = generateRandomColors(numberOfSquares);
+function init() {
+    startGame();
+    newLevel();
+    newGame();
+}
 
-
-startGame();
+init();
 function startGame(){
     wantedColor=newWantedColor();
     color.textContent=wantedColor;
 
     for(var i=0;i<boxes.length;i++){
-        boxes[i].style.background=colors[i];
-
+        if(colors[i]){
+            boxes[i].style.background=colors[i];
+            boxes[i].style.display="block";
+        }
+        else{
+            boxes[i].style.display="none";
+        }
         boxes[i].addEventListener("click",function(){
             var boxColor=this.style.background;
-
             if(boxColor==wantedColor){
                 navText.textContent="Correct!";
-                //zmiana koloru nav
-                //zmiana koloru wszystkich boxow
                 boxes.forEach(function(box){
                     box.classList.remove("color__hidden");
                     box.style.background=wantedColor;

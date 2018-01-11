@@ -1,37 +1,37 @@
-newGame.addEventListener("click",function(){
-    navText.textContent=" ";
-    showBoxes();
-    document.querySelector(".top").style.background="#8e9fbb";
-    newGame.textContent="NEW GAME";
-    colors=generateRandomColors(numberOfSquares);
-    startGame();
-});
+function newGame() {
+    btnNewGame.addEventListener("click",function(){
+        refreshPanel();
+        btnNewGame.textContent="NEW GAME";
+        startGame();
+    });
+}
+
 
 function showBoxes(){
     boxes.forEach(function(box){
         box.classList.remove("color__hidden");
     });
+}
+
+function refreshPanel(){
+    navText.textContent=" ";
+    document.querySelector(".top").style.background="#8e9fbb";
+    colors=generateRandomColors(numberOfSquares);
+    showBoxes();
+}
+
+function newLevel(){
+    for (var i=0;i<btnLevel.length;i++){
+        btnLevel[i].addEventListener("click",function(){
+            btnLevel[0].classList.remove("navbar__button--active");
+            btnLevel[1].classList.remove("navbar__button--active");
+            this.classList.add("navbar__button--active");
+            if(this.textContent=="EASY"){
+                numberOfSquares=3;
+            }else{
+                numberOfSquares=6;
+            }
+            refreshPanel();
+            startGame();
+    })}
 };
-
-gameEasy.addEventListener("click",function(){
-    gameEasy.classList.add("navbar__button--active");
-    gameHard.classList.remove("navbar__button--active");
-    boxHard.classList.add("color__hidden");
-    navText.textContent=" ";
-    document.querySelector(".top").style.background="#8e9fbb";
-    numberOfSquares=3;
-    colors=generateRandomColors(numberOfSquares);
-    startGame();
-});
-
-
-gameHard.addEventListener("click",function(){
-    gameHard.classList.add("navbar__button--active");
-    gameEasy.classList.remove("navbar__button--active");
-    boxHard.classList.remove("color__hidden");
-    navText.textContent=" ";
-    document.querySelector(".top").style.background="#8e9fbb";
-    numberOfSquares=6;
-    colors=generateRandomColors(numberOfSquares);
-    startGame();
-});
